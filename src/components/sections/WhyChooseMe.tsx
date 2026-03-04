@@ -45,7 +45,7 @@ export const WhyChooseMe = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative px-4 md:px-8 max-w-md mx-auto"
+          className="relative px-4 md:px-8 max-w-md mx-auto isolate"
         >
             {/* Background Offset Accent */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary to-purple-600 transform translate-x-6 translate-y-6 md:translate-x-8 md:translate-y-8 rounded-[2.5rem] -z-10 opacity-80"></div>

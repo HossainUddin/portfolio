@@ -45,15 +45,24 @@ export const ProjectDetails = () => {
                     Back to Portfolio
                 </button>
                 
-                <div className="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-xl border border-slate-100 dark:border-slate-700">
-                    <div className="w-full aspect-video bg-slate-200 dark:bg-slate-900 overflow-hidden relative group">
+                <div className="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-2xl border border-slate-100 dark:border-slate-700">
+                    {/* Hero Image Section */}
+                    <div className="w-full relative group bg-slate-100 dark:bg-slate-900 flex items-center justify-center p-8 md:p-16 overflow-hidden">
+                        {/* Blurred background image for premium effect */}
+                        <div 
+                           className="absolute inset-0 opacity-30 dark:opacity-50 blur-3xl scale-125"
+                           style={{ backgroundImage: `url(${project.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                        />
+                        
+                        {/* Main foreground image */}
                         <img 
                             src={project.image} 
                             alt={project.title} 
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                            className="relative z-10 max-h-[60vh] w-auto object-contain drop-shadow-2xl rounded-xl transition-transform duration-700 group-hover:scale-105" 
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-8">
-                             <span className="bg-primary text-white text-sm font-bold px-4 py-1 rounded-full uppercase tracking-wide">
+                        
+                        <div className="absolute top-6 left-6 z-20">
+                             <span className="bg-primary/90 backdrop-blur-md text-white text-sm font-bold px-4 py-2 rounded-full uppercase tracking-widest shadow-lg">
                                  {project.category}
                              </span>
                         </div>
@@ -95,16 +104,18 @@ export const ProjectDetails = () => {
                         </div>
 
                         {project.gallery && project.gallery.length > 0 && (
-                            <div className="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800">
-                                <h2 className="text-3xl font-bold mb-8 text-slate-900 dark:text-white font-heading">Project Gallery</h2>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div className="mt-16 pt-12 border-t border-slate-100 dark:border-slate-800">
+                                <h2 className="text-3xl font-bold mb-10 text-slate-900 dark:text-white font-heading text-center">Project Gallery</h2>
+                                <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
                                     {project.gallery.map((imgUrl, idx) => (
-                                        <div key={idx} className="rounded-2xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-700 aspect-video bg-slate-100 dark:bg-slate-800 group">
+                                        <div key={idx} className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 group break-inside-avoid">
                                             <img 
                                                 src={imgUrl} 
                                                 alt={`${project.title} screenshot ${idx + 1}`} 
-                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                                                className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.03]" 
                                             />
+                                            {/* Overlay for depth */}
+                                            <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition-colors duration-300 pointer-events-none"></div>
                                         </div>
                                     ))}
                                 </div>

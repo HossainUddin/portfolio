@@ -58,7 +58,7 @@ export const Portfolio = () => {
               className="group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-700 cursor-pointer"
             >
               {/* Image */}
-              <div className="aspect-video overflow-hidden">
+              <div className="aspect-square overflow-hidden bg-slate-100 dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800">
                 <img
                   src={project.image}
                   alt={project.title}
