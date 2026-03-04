@@ -44,7 +44,11 @@ const DataContext = createContext<DataContextType | undefined>(undefined);
 export const DataProvider = ({ children }: { children: ReactNode }) => {
   return (
     <DataContext.Provider value={{
-        projects: siteData.projects as Project[],
+        projects: (siteData.projects as Project[]).map(p => ({
+            ...p,
+            image: p.image.replace('src/assets/', import.meta.env.BASE_URL),
+            gallery: p.gallery?.map(img => img.replace('src/assets/', import.meta.env.BASE_URL))
+        })),
         services: siteData.services as Service[],
         testimonials: siteData.testimonials as Testimonial[]
     }}>
