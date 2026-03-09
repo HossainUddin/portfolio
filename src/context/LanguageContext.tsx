@@ -23,8 +23,8 @@ export const translations = {
     
     // Hero
     'hero.greeting': "Hi, I'm Hossain Uddin Ahamad",
-    'hero.role': 'Web Developer & Graphic Designer',
-    'hero.subtext': 'I specialize in product advertisement visuals, banner design, and modern web development that helps brands grow.',
+    'hero.role': 'Creative Designer',
+    'hero.subtext': 'I build responsive websites and design engaging social media ads, banners, logos, and custom T-shirt graphics that help brands stand out.',
     'hero.viewPortfolio': 'View Portfolio',
     'hero.hireMe': 'Hire Me',
 
@@ -45,10 +45,10 @@ export const translations = {
     // Portfolio
     'portfolio.title': 'Featured Work',
     'portfolio.all': 'All',
-    'portfolio.web': 'Web',
-    'portfolio.t-shirt': 'T-Shirt',
-    'portfolio.ads': 'Ads',
-    'portfolio.banner': 'Banner',
+    'portfolio.web': 'Web Design',
+    'portfolio.t-shirt': 'T-Shirt Design',
+    'portfolio.ads': 'Social Media Ads',
+    'portfolio.banner': 'Banner & Logo',
 
     // Why Me
     'why.title': 'Why Choose Me?',
@@ -74,7 +74,6 @@ export const translations = {
     'cta.title': "Let's Build Something Creative Together",
     'cta.sub': 'Ready to elevate your brand with modern digital solutions?',
     'cta.start': 'Start a Project',
-    'cta.contact': 'Contact Me',
 
     // Footer
     'footer.rights': '© 2026 Hossain Uddin Ahmad. All rights reserved.',

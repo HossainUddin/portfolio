@@ -27,11 +27,11 @@ export const Hero = () => {
           <h2 className="text-primary font-bold tracking-wider uppercase mb-4 text-sm md:text-base">
             {t("hero.greeting")}
           </h2>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 leading-tight">
             <span className="block text-slate-900 dark:text-white">
-              Creative
+              Frontend Developer &
             </span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600 pb-2">
               {t("hero.role").split("&")[0]}
             </span>
           </h1>
@@ -100,9 +100,15 @@ export const Hero = () => {
                 ease: "easeInOut",
                 delay: 1,
               }}
-              className="absolute -top-4 right-4 sm:-top-8 sm:right-8 w-20 h-20 sm:w-24 sm:h-24 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md rounded-2xl shadow-xl flex items-center justify-center border border-white/50 dark:border-slate-700/50 z-20"
+              className="absolute -top-4 right-4 sm:-top-8 sm:right-8 w-20 h-20 sm:w-24 sm:h-24 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md shadow-xl flex items-center justify-center border border-white/50 dark:border-slate-700/50 z-20"
             >
-              <span className="text-4xl sm:text-5xl drop-shadow-md">🎨</span>
+              <span className="text-4xl sm:text-5xl drop-shadow-md">
+                <img
+                  src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExenFjM2w0eWhyaXJscDQ1aDl4djV5bHNnd3JiZmZ5dmRiN3JrNnE5ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bGgsc5mWoryfgKBx1u/giphy.gif"
+                  alt="Animated GIF"
+                  className="w-64 h-64 object-contain rounded-2xl p-[3px]"
+                ></img>
+              </span>
             </motion.div>
 
             {/* Floating Element 2 */}
@@ -118,6 +124,23 @@ export const Hero = () => {
             >
               <span className="font-bold text-sm sm:text-base bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
                 Frontend Dev
+              </span>
+            </motion.div>
+
+
+            {/* Floating Element 3 */}
+            <motion.div
+              animate={{ y: [0, 15, 0], x: [0, -10, 0] }}
+              transition={{
+                repeat: Infinity,
+                duration: 5,
+                ease: "easeInOut",
+                delay: 0.5,
+              }}
+              className="absolute bottom-16 -right-6 sm:bottom-36 sm:-right-10 px-6 py-4 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-full shadow-2xl border border-white/50 dark:border-slate-700/50 z-20"
+            >
+              <span className="font-bold text-sm sm:text-base bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-primary">
+                Designer
               </span>
             </motion.div>
           </div>

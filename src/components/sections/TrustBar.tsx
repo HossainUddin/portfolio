@@ -42,7 +42,7 @@ export const TrustBar = () => {
   const { t } = useLanguage();
 
   const stats = [
-    { label: t('stats.projects'), value: '50+' },
+    { label: t('stats.projects'), value: '20+' },
     { label: t('stats.delivery'), value: '100%' },
     { label: t('stats.satisfaction'), value: '5★' },
     { label: t('stats.design'), value: '∞' },
