@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../../context/LanguageContext';
-import { Facebook, Instagram, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail, MessageCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 export const Footer = () => {
@@ -41,7 +41,8 @@ export const Footer = () => {
              <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
               <li><button onClick={() => handleNav('services')} className="hover:text-primary transition-colors text-left w-full">Web Development</button></li>
               <li><button onClick={() => handleNav('services')} className="hover:text-primary transition-colors text-left w-full">T-Shirt Design</button></li>
-              <li><button onClick={() => handleNav('services')} className="hover:text-primary transition-colors text-left w-full">Banner Design</button></li>
+              <li><button onClick={() => handleNav('services')} className="hover:text-primary transition-colors text-left w-full">Banner & Logo Design</button></li>
+              <li><button onClick={() => handleNav('services')} className="hover:text-primary transition-colors text-left w-full">Social Media Post Design</button></li>
             </ul>
           </div>
 
@@ -49,10 +50,10 @@ export const Footer = () => {
           <div>
              <h4 className="font-bold mb-6 text-slate-900 dark:text-white">Connect</h4>
              <div className="flex space-x-4">
-                <a href="#" className="p-2 bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-primary hover:text-white transition-all"><Facebook size={18} /></a>
-                <a href="#" className="p-2 bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-primary hover:text-white transition-all"><Instagram size={18} /></a>
-                <a href="#" className="p-2 bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-primary hover:text-white transition-all"><Linkedin size={18} /></a>
-                <a href="#" className="p-2 bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-primary hover:text-white transition-all"><Twitter size={18} /></a>
+                <a href="https://www.facebook.com/HossainUddin0/" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-primary hover:text-white transition-all"><Facebook size={18} /></a>
+                <a href="https://www.instagram.com/hossainuddin0/" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-primary hover:text-white transition-all"><Instagram size={18} /></a>
+                <a href="https://www.linkedin.com/in/hossainuddinahamad/" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-primary hover:text-white transition-all"><Linkedin size={18} /></a>
+                <a href="https://m.me/HossainUddin0" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-primary hover:text-white transition-all"><MessageCircle size={18} /></a>
              </div>
           </div>
         </div>
